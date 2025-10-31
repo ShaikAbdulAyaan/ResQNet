@@ -1,0 +1,140 @@
+.dashboard {
+  text-align: center;
+  color: #fff;
+  background-color: #141a2a;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.device-status {
+  background: #1f263b;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  box-shadow: 0 0 15px #ff3c3c44;
+}
+
+.device-status h3 {
+  margin-bottom: 10px;
+}
+
+.contacts, .location {
+  background: #1f263b;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.contact-input {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-input input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  width: 60%;
+}
+
+.contact-input button {
+  background: #2dd36f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-input button:hover {
+  background: #28b15d;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🚨 3D Glowing Emergency Button */
+.emergency-btn {
+  background: linear-gradient(180deg, #ff0000, #b30000);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px; /* rectangular with soft corners */
+  padding: 15px 40px;
+  box-shadow: 0 6px 0 #800000, 0 0 25px rgba(255, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effect — make it glow more */
+.emergency-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #800000, 0 0 35px rgba(255, 0, 0, 0.9);
+}
+
+/* Pressed effect — looks like it’s being pushed */
+.emergency-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #660000, 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/* Disabled state */
+.emergency-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+
+
+.logout-btn {
+  margin-top: 2rem;
+  background: #555;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.location-permission {
+  background: #fff7e6;
+  border: 1px solid #ffd580;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+.location-permission button {
+  background: #ffb347;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.location-permission button:hover {
+  background: #ff9800;
+}
+
+

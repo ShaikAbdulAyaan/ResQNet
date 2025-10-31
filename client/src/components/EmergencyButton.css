@@ -1,0 +1,16 @@
+.emergency-btn {
+  margin-top: 2rem;
+  background: radial-gradient(circle, #ff0000 0%, #c00000 90%);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 25px #ff000080;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.emergency-btn:hover {
+  transform: scale(1.1);
+}

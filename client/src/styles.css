@@ -1,0 +1,46 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+button {
+  background: #e53935;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.watch-sim {
+  background: #1f1f1f;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #e53935;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.splash-logo {
+  width: 140px;
+  height: 140px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}

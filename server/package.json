@@ -1,0 +1,24 @@
+{
+  "name": "resqnet-server",
+  "version": "1.0.0",
+  "description": "Backend server for ResQNet emergency alert app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^12.6.0",
+    "body-parser": "^1.20.2",
+    "twilio": "^4.22.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "author": "ResQNet Team",
+  "license": "MIT"
+}
