@@ -1,6 +1,6 @@
 // client/src/utils/api.js
 
-const BASE_URL = "https://resqnet-3p6z.onrender.com";
+const BASE_URL = "https://resqnet-3p6z.onrender.com/api/send-alert";
 
 // 🚨 Send emergency alert
 export const sendAlert = async (phone) => {

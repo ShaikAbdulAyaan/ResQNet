@@ -123,7 +123,7 @@ export default function Dashboard() {
         contacts,
       };
       // ✅ Use live backend URL
-      const res = await fetch("https://resqnet-3p6z.onrender.com/send-alert", {
+      const res = await fetch("https://resqnet-3p6z.onrender.com/api/send-alert", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

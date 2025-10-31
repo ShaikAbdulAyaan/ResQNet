@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://resqnet-3p6z.onrender.com/api/send-alert",
   "browserslist": {
     "production": [
       ">0.2%",
