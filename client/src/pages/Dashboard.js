@@ -18,7 +18,7 @@ export default function Dashboard() {
   const recognitionRef = useRef(null);
   const restartingRef = useRef(false);
 
-  // username
+  // 🧍 Username setup
   useEffect(() => {
     if (user?.email) {
       const key = "resq_username_" + user.email;
@@ -32,7 +32,7 @@ export default function Dashboard() {
     }
   }, [user]);
 
-  // smartwatch simulation
+  // ⌚ Simulated smartwatch data
   useEffect(() => {
     const id = setInterval(() => {
       const connected = Math.random() > 0.2;
@@ -48,7 +48,7 @@ export default function Dashboard() {
     return () => clearInterval(id);
   }, []);
 
-  // contacts persistence
+  // ☎️ Contacts persistence
   useEffect(() => {
     const key = "resq_contacts_" + (user?.email ?? "anon");
     const saved = localStorage.getItem(key);
@@ -64,7 +64,7 @@ export default function Dashboard() {
     localStorage.setItem(key, JSON.stringify(contacts));
   }, [contacts, user]);
 
-  // location
+  // 📍 Location fetching
   const getLocation = async () =>
     new Promise((resolve, reject) => {
       if (!navigator.geolocation)
@@ -91,6 +91,7 @@ export default function Dashboard() {
     return () => clearInterval(id);
   }, []);
 
+  // ➕ Add & remove contacts
   const addContact = () => {
     const num = newContact.trim();
     if (!num) return alert("Enter a phone number.");
@@ -101,7 +102,7 @@ export default function Dashboard() {
   const removeContact = (i) =>
     setContacts((c) => c.filter((_, idx) => idx !== i));
 
-  // emergency
+  // 🚨 Emergency alert
   const handleEmergency = async (reason = "Manual trigger") => {
     if (!contacts.length) {
       alert("Please add at least one emergency contact first.");
@@ -121,7 +122,8 @@ export default function Dashboard() {
         reason,
         contacts,
       };
-      const res = await fetch("http://localhost:5000/api/send-alert", {
+      // ✅ Use live backend URL
+      const res = await fetch("https://resqnet-3p6z.onrender.com/send-alert", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -137,7 +139,7 @@ export default function Dashboard() {
     }
   };
 
-  // voice recognition
+  // 🎤 Voice command trigger
   useEffect(() => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -192,7 +194,7 @@ export default function Dashboard() {
     };
   }, [contacts]);
 
-  // install (download app)
+  // 📲 Install prompt for PWA
   useEffect(() => {
     const handler = (e) => {
       e.preventDefault();
@@ -244,8 +246,7 @@ export default function Dashboard() {
         <h4>📍 Current Location</h4>
         {location ? (
           <p>
-            Lat: {location.lat.toFixed(5)}, Lon: {location.lon.toFixed(5)}{" "}
-            <br />
+            Lat: {location.lat.toFixed(5)}, Lon: {location.lon.toFixed(5)} <br />
             Accuracy: ±{Math.round(location.accuracy)}m
           </p>
         ) : (
@@ -291,4 +292,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
 
