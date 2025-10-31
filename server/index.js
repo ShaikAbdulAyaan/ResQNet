@@ -42,10 +42,11 @@ app.get("/api/health", (req, res) => {
   res.json({ ok: true, message: "🚑 ResQNet backend is healthy!" });
 });
 
-// Root route
+// Serve React app for root path
 app.get("/", (req, res) => {
-  res.send("🚑 ResQNet backend is up and running!");
+  res.sendFile(path.join(CLIENT_BUILD_PATH, "index.html"));
 });
+
 
 // Emergency alert route
 app.post("/api/send-alert", async (req, res) => {
